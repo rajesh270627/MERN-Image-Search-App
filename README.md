@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # MERN-Image-Search-App
 We Can Search Images.Images are Fetched By Using Unsplash API...
 =======
