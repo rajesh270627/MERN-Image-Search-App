@@ -1,0 +1,28 @@
+.top-banner {
+    background: #fff3cd;
+    border: 1px solid #f2d98e;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .search-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+  }
+  
+  .tag {
+    background: #ffe08a;
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6b5200;
+  }
+  
