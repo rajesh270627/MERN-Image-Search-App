@@ -1,59 +1,77 @@
-# MERN-Image-Search-App
-
-# We Can Search Images.Images are fetched by using Unsplash API..
-
 # 🌄 MERN Image Search App
 
-A full-stack **MERN** application that allows users to log in using **Google, GitHub, and Facebook OAuth**, search images from **Unsplash**, view **top searches**, and track **personal search history**.
+A full-stack **MERN application** that lets users **search images from Unsplash**, view **top search keywords**, maintain **personal search history**, and login using **Google / GitHub / Facebook OAuth**.
+
+<div align="center">
+
+✅ **MERN Stack** — MongoDB, Express, React, Node  
+✅ **OAuth Login** — Google, GitHub, Facebook  
+✅ **Protected Search** — Only logged-in users can search  
+✅ **Real-time Search & History** stored in MongoDB  
+
+</div>
 
 ---
 
-## ✅ Features
+## ✨ Features
 
-✅ Login with **Google / GitHub / Facebook**  
-✅ Only logged-in users can search  
-✅ Search images using **Unsplash API**  
-✅ 4-column responsive image grid  
-✅ Multi-select images with selection counter  
-✅ **Top 5 most searched keywords**  
-✅ **User search history** stored in MongoDB  
-✅ User can click history item to re-search  
-✅ Protected routes using Passport + cookie-session
+| ✅ Feature | Description |
+|----------|-------------|
+| 🔐 OAuth Login | Google / GitHub / Facebook |
+| 🔍 Image Search | Uses Unsplash API (High quality images) |
+| 🌟 Top Searches | Displays 5 most-searched keywords |
+| 🕒 History | Each user’s search history stored separately |
+| ↩️ Click-to-Re-Search | Users can click history items |
+| 📦 Multi-Select | Users can select multiple images |
+| 🧱 Responsive Grid | Clean 4-column masonry layout |
+| 🔒 Protected Routes | Passport + cookie-session |
 
 ---
 
 ## 📁 Folder Structure
 
+```
 MERN-Image-Search-App/
 │
-├── client/ # React Frontend
-│ ├── public/ # Static assets + logo + index.html
-│ └── src/
-│ ├── Components/ # Navbar, TopSearches, HistorySidebar
-│ ├── pages/ # SearchPage.jsx
-│ └── App.js # Routing + Auth logic
+├── client/                  # React Frontend
+│   ├── public/              # Static assets & HTML
+│   └── src/
+│       ├── Components/      # Navbar, TopSearches, HistorySidebar
+│       ├── pages/           # SearchPage.jsx
+│       └── App.js           # Routing + Auth logic
 │
-├── server/ # Express Backend
-│ ├── config/ # OAuth Strategies (Passport)
-│ ├── models/ # User + Search Schema
-│ ├── routes/ # Auth + Search API routes
-│ └── index.js # App entrypoint, middleware, sessions
+├── server/                  # Express Backend
+│   ├── config/              # OAuth + Passport strategies
+│   ├── models/              # User & Search schema
+│   ├── routes/              # Auth + Search APIs
+│   └── index.js             # Main server app / middleware
 │
 └── README.md
-
-
+```
 
 ---
 
-## ✅ Installation & Setup
+## 🚀 Installation & Setup
 
-### 1️⃣ Clone Repository
+### ✅ 1️⃣ Clone the Repository
 
+```bash
 git clone https://github.com/rajesh270627/MERN-Image-Search-App.git
 cd MERN-Image-Search-App
+```
+
+---
+
+### ✅ 2️⃣ Backend Setup (Server)
+
+```bash
 cd server
 npm install
+```
 
+Create `.env` inside `server/`:
+
+```
 MONGO_URI=mongodb://127.0.0.1:27017/mernapp
 SESSION_SECRET=your_secret_key
 CLIENT_ORIGIN=http://localhost:3000
@@ -71,68 +89,92 @@ GITHUB_CALLBACK_URL=http://localhost:5000/auth/github/callback
 FACEBOOK_CLIENT_ID=xxxxxxxxxxx
 FACEBOOK_CLIENT_SECRET=xxxxxxxxxxx
 FACEBOOK_CALLBACK_URL=http://localhost:5000/auth/facebook/callback
+```
 
-Get Unsplash API Key: https://unsplash.com/developers/apps
+✅ Get Unsplash API Key:  
+👉 https://unsplash.com/developers/apps
 
-YOUR UNSPLASH API KEY
-Unsplash API key==xxxxxxxxxxx
+Run backend:
 
-✅ Server runs at: http://localhost:5000
+```bash
+npm start
+```
 
+✅ Server runs at → http://localhost:5000
 
-🎨 Frontend Setup (Client)
+---
+
+### ✅ 3️⃣ Frontend Setup (Client)
+
+```bash
 cd client
 npm install
 npm start
+```
 
-✅ Runs at: http://localhost:3000
+✅ React App runs at → http://localhost:3000
 
-✅ API Endpoints (Postman or cURL)
+---
 
-🔹 ✅ Top Searches
+## 🧪 Test APIs Using Postman / cURL
 
-GET
+### 🔹 ✅ 1. Get Top Searches
 
+**GET**
+```
 http://localhost:5000/api/top-searches
+```
 
-
-cURL
-
+**cURL**
+```bash
 curl http://localhost:5000/api/top-searches
+```
 
-🔹 ✅ Search Images
+---
 
-POST
+### 🔹 ✅ 2. Search Images
 
+**POST**
+```
 http://localhost:5000/api/search
+```
 
-
-Body → JSON
-
+**Body (JSON)**
+```json
 { "term": "cars", "page": 1 }
+```
 
+**cURL**
+```bash
+curl -X POST http://localhost:5000/api/search -H "Content-Type: application/json" -d '{"term":"cars","page":1}'
+```
 
-cURL
+---
 
-curl -X POST http://localhost:5000/api/search \
--H "Content-Type: application/json" \
--d '{"term":"cars","page":1}'
+### 🔹 ✅ 3. User Search History
 
-🔹 ✅ User Search History
-
-GET
-
+**GET**
+```
 http://localhost:5000/api/history
+```
 
-
-cURL
-
+**cURL**
+```bash
 curl http://localhost:5000/api/history
+```
 
-✅ Visual Proof to Include in repo
+---
 
-✅ OAuth Login screenshots
-✅ Search results page
-✅ Multi-select active images
-✅ Top Searches banner
-✅ History sidebar
+## 📸 Suggested Screenshots to Include in Repo
+
+✅ Google / GitHub / Facebook OAuth login page  
+✅ Search results page with responsive grid  
+✅ Multi-select active selection bar  
+✅ Top Searches banner  
+✅ Search history sidebar with clickable history  
+
+---
+
+## ⭐ Contribute & Support
+
+If this project helped you, don’t forget to **star ⭐ the repository** and share it!
