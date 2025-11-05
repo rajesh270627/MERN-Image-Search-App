@@ -1,1 +1,0 @@
-# MERN-Image-Search-App
