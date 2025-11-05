@@ -172,14 +172,45 @@ curl http://localhost:5000/api/history
 ## 📸 Suggested Screenshots to Include in Repo
 
 ✅ Google / GitHub / Facebook OAuth login page  
+
+
 ✅ Search results page with responsive grid  
 ✅ Multi-select active selection bar  
 ✅ Top Searches banner  
 ✅ Search history sidebar with clickable history  
 
 ---
+## 📸 Screenshots
+
+### ✅ Overall Project UI
+![Overall Project](./Screenshots/overallproject.png)
+
+---
+
+### 🔐 OAuth Login (Google / GitHub / Facebook)
+<p align="center">
+  <img src="./Screenshots/Loginin3formats.png" width="500" />
+</p>
+
+### ✅ Login Using Google
+![Google Login](./Screenshots/Loginusinggoogle.png)
+
+### ✅ Login Using GitHub
+![GitHub Login](./Screenshots/loginusinggithub.png)
+
+### ✅ Login Using Facebook
+![Facebook Login](./Screenshots/loginusingfacebook.png)
+
+---
+
+### 🔍 Top Searches
+![Top Searches](./Screenshots/Top5searches.png)
+
+---
+
+### 📂 Recent Search History of User
+![Search History](./Screenshots/RecentSearchhistoryofuser.png)
 
 ## ⭐ Contribute & Support
 
 If this project helped you, don’t forget to **star ⭐ the repository** and share it!
->>>>>>> 9725e6c65ac7d49634e0329558178ac700cf1ee7
