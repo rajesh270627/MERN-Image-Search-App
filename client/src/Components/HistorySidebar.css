@@ -1,0 +1,32 @@
+.history-sidebar {
+  width: 200px;
+  background-color: #44b6a1; 
+  position: fixed;
+  left: 0;
+  top: 80px;
+  bottom: 0;
+  padding: 15px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+
+.history-item {
+  background: white;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #dddddd;
+}
+
+.history-item:hover {
+  background: #cdefff;
+}
+
+.empty {
+  color: gray;
+}
+.hh{
+  text-align: center;
+}
