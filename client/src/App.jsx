@@ -28,7 +28,7 @@ function App() {
             path="/"
             element={
               !user ? (
-                <h2 style={{ textAlign: "center", marginTop: 100 }}>Please Login!</h2>
+                <h2 style={{ textAlign: "center", marginTop: 100 }}>Please SignIn or SignUp!</h2>
               ) : (
                 <Navigate to="/search" replace />
               )
